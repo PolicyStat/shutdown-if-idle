@@ -326,7 +326,7 @@ def main(options):
             logger.info("Shutdown does not save money")
 
 
-if __name__ == '__main__':
+def entry_point():
     logging.basicConfig()
     logger.setLevel(logging.INFO)
     logger.addHandler(console_handler)
@@ -337,3 +337,7 @@ if __name__ == '__main__':
         options[name] = os.environ.get(name, default)
 
     main(options)
+
+
+if __name__ == '__main__':
+    entry_point()

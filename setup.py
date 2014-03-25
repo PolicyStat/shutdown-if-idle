@@ -51,4 +51,9 @@ setup(
         "Topic :: Text Processing :: Markup :: XML",
     ],
     long_description=get_description(),
+    entry_points={
+        'console_scripts': [
+            'shutdown-if-idle = shutdown_if_no_usage:entry_point',
+        ],
+    },
 )
