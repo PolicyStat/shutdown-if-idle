@@ -1,3 +1,3 @@
 #! /bin/sh
 
-nosetests --verbose --with-doctest --with-coverage --cover-package shutdown_if_idle $@ && find -name '*.py' | xargs flake8
+nosetests --verbose --with-doctest --with-coverage shutdown_if_no_usage.py $@ && find -name '*.py' | xargs flake8
